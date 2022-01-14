@@ -1,0 +1,36 @@
+### INITIALISE ###
+git clone https://github.com/zamnolence/PSG-traffic.git
+cd PSG-traffic
+git config --global user.name <name>		# set username
+git config --global user.email <email>
+git branch					# check current branch
+git branch -va					# check all branch
+git fetch --all					# fetch all branch (omit --all for current branch) 
+git pull origin <my-branch>			# pull all changes
+git checkout -b  <my-branch>			# switch create new branch
+git checkout <my-branch>			# switch to <my-branch>
+
+### ADD AND COMMIT TO LOCAL ###
+git status					# check status of files
+git add <file>					# -A for all, . for tracked files
+git commit -m "message"				# commit to branch
+
+### MERGE BRANCH ###
+git checkout main
+git fetch
+git pull origin main
+git checkout <main-branch>			# check out the branch you wish to merge into			
+git merge <my-branch>				# merge my-branch to main-branch (my-branch can be deleted after this)
+
+### Git Remotes ### Push, pull, and more.
+git clone <repo>				# remotes/<remote name>/<branch name>
+<remote name>/<branch name>			# e.g. origin/main
+Remote branches have the special property that when you check them out, 
+you are put into detached HEAD mode. The origin/main will only update when remote updates
+
+git fetch					# fetch (not yet changed local) from remote to local
+git push					# fetch and merge to local
+git push origin <my-branch>
+git fakeTeamwork				# make a fake commit on remote main
+git fakeTeamwork foo 3				# make 3 fake commits on main
+git pull --rebase; git push			# fetch and merge
