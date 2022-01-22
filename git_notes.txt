@@ -34,3 +34,18 @@ git push origin <my-branch>
 git fakeTeamwork				# make a fake commit on remote main
 git fakeTeamwork foo 3				# make 3 fake commits on main
 git pull --rebase; git push			# fetch and merge
+
+### Jupyter notebook
+Open anaconda prompt
+conda activate samenv
+cd Documents/conda_projects/PSG-traffic
+jupyter notebook
+
+
+### Fix sbox_fatal_memory_exceeded
+jupyter nbconvert input_notebook.ipynb --to notebook --ClearOutputPreprocessor.enabled=True --stdout > output_notebook.ipynb
+
+
+
+!setx GOOGLE_API_KEY "AIzaSyBF2EV-k69hQZDCViepARR7VUc5ieYGXxc"
+api_key = "AIzaSyBF2EV-k69hQZDCViepARR7VUc5ieYGXxc"
